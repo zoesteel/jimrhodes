@@ -1,0 +1,40 @@
+/*
+Error: Inconsistent indentation: previous line was indented by 6 spaces, but this line was indented by 4 spaces.
+        on line 11215 of theme.css
+
+11210:   border: 0;
+11211:   /*  @include hover-focus {
+11212:       color: $dropdown-link-hover-color !important;
+11213:       text-decoration: none;
+11214:       background-color: $dropdown-link-hover-bg;
+11215:     }
+11216:   *\/
+11217: }
+11218: /* line 85, sass/understrap/understrap.scss *\/
+11219: .navbar-dark .navbar-nav .dropdown-menu .nav-link.active, .navbar-dark .navbar-nav .dropdown-menu .nav-link:active {
+11220:   /*color: $dropdown-link-active-color !important;*\/
+
+Backtrace:
+theme.css:11215
+/Users/Zoe/.rvm/gems/ruby-2.4.2/gems/sass-3.5.6/lib/sass/engine.rb:509:in `try_comment'
+/Users/Zoe/.rvm/gems/ruby-2.4.2/gems/sass-3.5.6/lib/sass/engine.rb:482:in `block in tabulate'
+/Users/Zoe/.rvm/gems/ruby-2.4.2/gems/sass-3.5.6/lib/sass/engine.rb:452:in `each'
+/Users/Zoe/.rvm/gems/ruby-2.4.2/gems/sass-3.5.6/lib/sass/engine.rb:452:in `each_with_index'
+/Users/Zoe/.rvm/gems/ruby-2.4.2/gems/sass-3.5.6/lib/sass/engine.rb:452:in `tabulate'
+/Users/Zoe/.rvm/gems/ruby-2.4.2/gems/sass-3.5.6/lib/sass/engine.rb:417:in `_to_tree'
+/Users/Zoe/.rvm/gems/ruby-2.4.2/gems/sass-3.5.6/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/Zoe/.rvm/gems/ruby-2.4.2/gems/sass-3.5.6/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/Zoe/.rvm/gems/ruby-2.4.2/gems/sass-3.5.6/lib/sass/exec/sass_scss.rb:391:in `run'
+/Users/Zoe/.rvm/gems/ruby-2.4.2/gems/sass-3.5.6/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Users/Zoe/.rvm/gems/ruby-2.4.2/gems/sass-3.5.6/lib/sass/exec/base.rb:52:in `parse'
+/Users/Zoe/.rvm/gems/ruby-2.4.2/gems/sass-3.5.6/lib/sass/exec/base.rb:19:in `parse!'
+/Users/Zoe/.rvm/gems/ruby-2.4.2/gems/sass-3.5.6/bin/sass:13:in `<top (required)>'
+/Users/Zoe/.rvm/gems/ruby-2.4.2/bin/sass:23:in `load'
+/Users/Zoe/.rvm/gems/ruby-2.4.2/bin/sass:23:in `<main>'
+/Users/Zoe/.rvm/gems/ruby-2.4.2/bin/ruby_executable_hooks:15:in `eval'
+/Users/Zoe/.rvm/gems/ruby-2.4.2/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Inconsistent indentation: previous line was indented by 6 spaces, but this line was indented by 4 spaces.\A         on line 11215 of theme.css\A \A 11210:   border: 0;\A 11211:   /*  @include hover-focus {\A 11212:       color: $dropdown-link-hover-color !important;\A 11213:       text-decoration: none;\A 11214:       background-color: $dropdown-link-hover-bg;\A 11215:     }\A 11216:   */\A 11217: }\A 11218: /* line 85, sass/understrap/understrap.scss */\A 11219: .navbar-dark .navbar-nav .dropdown-menu .nav-link.active, .navbar-dark .navbar-nav .dropdown-menu .nav-link:active {\A 11220:   /*color: $dropdown-link-active-color !important;*/"; }

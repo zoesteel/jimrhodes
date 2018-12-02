@@ -1,0 +1,127 @@
+/* line 7, ../sass/understrap/understrap.scss */
+#wrapper-hero {
+  padding: 0px !important;
+}
+
+/* line 10, ../sass/understrap/understrap.scss */
+.sticky,
+.gallery-caption,
+.bypostauthor {
+  font-size: inherit;
+}
+
+/* line 17, ../sass/understrap/understrap.scss */
+.wp-caption {
+  font-size: inherit;
+}
+
+/* line 19, ../sass/understrap/understrap.scss */
+.wp-caption-text {
+  font-size: inherit;
+}
+
+/* line 21, ../sass/understrap/understrap.scss */
+.screen-reader-text {
+  font-size: inherit;
+}
+
+/* line 23, ../sass/understrap/understrap.scss */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+/* line 29, ../sass/understrap/understrap.scss */
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+/* line 35, ../sass/understrap/understrap.scss */
+.aligncenter {
+  margin: 0px auto;
+}
+
+/* line 38, ../sass/understrap/understrap.scss */
+.entry-footer span {
+  padding-right: 10px;
+}
+
+/* line 41, ../sass/understrap/understrap.scss */
+figure.woocommerce-product-gallery__wrapper {
+  max-width: inherit !important;
+}
+
+/* line 46, ../sass/understrap/understrap.scss */
+img.wp-post-image,
+article img,
+figure,
+img,
+#secondary img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 56, ../sass/understrap/understrap.scss */
+a.skip-link {
+  position: fixed;
+  z-index: 1000;
+  top: 0px;
+  right: 0px;
+}
+
+/* line 64, ../sass/understrap/understrap.scss */
+.jumbotron {
+  margin-bottom: 0px;
+}
+
+/* line 67, ../sass/understrap/understrap.scss */
+.navbar-dark .navbar-nav .dropdown-menu .nav-link {
+  display: block;
+  width: 100%;
+  /* padding: $dropdown-item-padding-y $dropdown-item-padding-x; */
+  clear: both;
+  /*font-weight: $font-weight-normal;*/
+  /*color: $dropdown-link-color !important;*/
+  text-align: inherit;
+  white-space: nowrap;
+  background: none;
+  border: 0;
+  /*  @include hover-focus {
+      color: $dropdown-link-hover-color !important;
+      text-decoration: none;
+      background-color: $dropdown-link-hover-bg;
+    }
+  */
+}
+/* line 85, ../sass/understrap/understrap.scss */
+.navbar-dark .navbar-nav .dropdown-menu .nav-link.active, .navbar-dark .navbar-nav .dropdown-menu .nav-link:active {
+  /*color: $dropdown-link-active-color !important;*/
+  text-decoration: none;
+  /*background-color: $dropdown-link-active-bg;*/
+}
+/* line 92, ../sass/understrap/understrap.scss */
+.navbar-dark .navbar-nav .dropdown-menu .nav-link.disabled, .navbar-dark .navbar-nav .dropdown-menu .nav-link:disabled {
+  /*color: $dropdown-link-disabled-color !important;*/
+  background-color: transparent;
+  /* @if $enable-gradients {
+     background-image: none;
+   }*/
+}
+
+/*.navbar-light .navbar-brand a {*/
+/*color: $navbar-light-active-color;*/
+   /* @include hover-focus {
+      color: $navbar-light-active-color;
+    }
+}
+
+.navbar-dark .navbar-brand a {
+    color: $navbar-dark-active-color;
+
+    @include hover-focus {
+      color: $navbar-dark-active-color;
+    }
+}*/

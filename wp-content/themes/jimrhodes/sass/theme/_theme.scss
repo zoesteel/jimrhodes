@@ -1,0 +1,431 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+// variable declaration in SCSS we use variables to keep style clean and easy to modify
+// if we use this variable to say 50 rules and want to change the color, we would change only this variable.
+$mycolor: #67A6A6;
+
+
+ 
+/* GLOBAL */
+
+body {
+	font-family: $mainFont;
+	text-align: justify;
+	font-size: 16px;
+	overflow-x: hidden;
+}
+
+a {
+	color: $blue;
+	text-decoration: none;
+	transition: 0.4s;
+
+	&:hover {
+		color: #000;
+		text-decoration: none;
+	}
+}
+
+
+/* HEADER STYLES */
+
+.mobile-menu {
+	height: 28rem;
+	background-color: #000;
+	width: 100%;
+	z-index: 2;
+	display: none;
+
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
+}
+
+.navbar {
+	height: 20rem;
+	color: #fff;
+	background-color: #000;
+}
+
+.navbar-nav {
+		background-color: #000;
+	/*
+	maybe ignore this
+	height: 4rem;
+	line-height: 4rem;
+	width: 100%;
+	border-bottom: 1px solid $grey;
+	z-index: 999;
+	-webkit-box-shadow: 2px 3px 10px -2px rgba(0,0,0,0.41);	
+	-moz-box-shadow: 2px 3px 10px -2px rgba(0,0,0,0.41);
+	box-shadow: 2px 3px 10px -2px rgba(0,0,0,0.41);*/
+	
+	a {
+		color: #ededed;
+		font-weight: 500;
+		font-size: 13.5px;
+		text-transform: uppercase;
+		&:hover {
+			color: $lightgrey;
+		}
+	}
+}
+
+#navbarNavDropdown {
+	background-color: #000;
+}
+
+h1 {
+	font-family: $headerFont;
+}
+
+.title-txt {
+	font-size: 3.5em!important;
+	position: absolute;
+	bottom: 0;
+
+	@media screen and (min-width: 768px) {
+		font-size: 5em!important;
+	}
+}
+
+
+/*remember to test in IE */
+
+
+.wrap {
+	background-color: #000;
+	width: 100%;
+	border-bottom: 1px solid $grey;
+	z-index: 999;
+	-webkit-box-shadow: 0px 3px 10px -2px rgba(0,0,0,0.41);	
+	-moz-box-shadow: 0px 3px 10px -2px rgba(0,0,0,0.41);
+	box-shadow: 0px 3px 10px -2px rgba(0,0,0,0.41);
+
+	@media screen and (min-width: 768px) {
+
+		height: 4rem;
+		line-height: 4rem;
+	}
+	
+	a {
+		color: #ededed;
+		font-weight: 500;
+		font-size: 11.5px;
+
+	@media screen and (min-width: 768px) {
+		font-size: 13.5px;
+	}
+
+		&:hover {
+			color: $lightgrey;
+		}
+	}
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.3s;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) 
+*/
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+
+.nav-menu {
+
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+
+		li {
+			margin-right: 1rem;
+		}
+	}
+}
+
+
+.burger-menu {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+/* FRONT PAGE STYLES */
+
+.container-main {
+	padding: 2rem;
+	height: 100%;
+}
+
+.section-heading {
+	font-weight: 600;
+	border-bottom: 4px solid black;
+	padding-bottom: 1rem;
+	margin-bottom: 2rem;
+	font-size: 18px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.section-p {
+	font-size: 14.5px;
+	margin-bottom: 1.6rem;
+}
+
+
+/* SECTIONS */
+
+.wrapper {
+	background-color: #fff;
+}
+
+.black-bg {
+	background-color: #000;
+	color: #fff;
+
+	.section-heading {
+		border-bottom: 4px solid #fff;
+	}
+}
+
+/* bio */
+
+.about-me {
+	color: #000;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	position: relative;
+	
+	&:after {
+		content: "";
+	  	background-image: url('img/crowd-bg.jpg');
+		background-size: cover;
+		background-position: center left;
+	  	opacity: 0.5;
+	  	width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		z-index: -1;   
+	}
+
+}
+
+/* news */
+
+.news {
+	background-color: #fff;
+
+	h3 {
+		text-transform: uppercase;
+		font-size: 16px;
+	}
+
+}
+
+/* show list */
+
+.shows {
+
+	.section-heading {
+		border-bottom: 4px solid #fff;
+	}
+
+	td, th {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		border-top: none!important;
+		border-bottom: 1px solid #fff;
+	}
+}
+
+
+/* photo gallery */
+
+.caption {
+	display: none!important;
+}
+
+.envira-gallery-image {
+	&:hover {
+		opacity: 0.7;
+	}
+}
+
+/* videos */
+
+
+.video-title {
+	margin-top: 1rem;
+	font-size: 14px;
+}
+
+.video-wrapper {
+	max-width: 90%;
+}
+
+/* band info */
+
+.band-logo {
+	display: block; 
+	margin: 0 auto 20px auto;
+}
+
+.band-member {
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+}
+
+.band-member-name {
+	text-align: left;
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding-top: 1rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 3px solid #000;
+}
+
+.band-member-photo {
+	border-radius: 3px;
+	width: 200px;
+	padding-bottom: 0.5rem;
+	padding-top: 0.75rem;
+}
+
+.band-member-info {
+	padding-bottom: 0.5rem;
+	padding-top: 0.75rem;
+	font-style: italic;
+}
+
+.band-bio-title {
+	text-align: left;
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding-bottom: 0.5rem;
+	border-bottom: 2px solid #000;
+}
+
+.band-member-bio {
+	padding-bottom: 0.5rem;
+	padding-top: 0.75rem;
+}
+
+/* song list */
+
+.songs {
+	background-color: $blue;
+}
+
+/* contact form */
+
+.contact {
+
+	label {
+		text-transform: uppercase;
+		margin-bottom: 1.2rem;
+		font-weight: 500;
+	}
+
+	input {
+		border: 1px solid #000!important;
+		border-radius: 0!important;
+
+	}
+
+	textarea {
+
+		border: 1px solid #000!important;
+		border-radius: 0!important;
+	}
+
+	&:focus {
+		border-color: $blue;
+	}
+
+	input[type=submit] {
+		background-color: #000;
+		color: #fff;
+		text-transform: uppercase;
+
+		&:hover {
+			background-color: $blue;
+			color: #fff;
+			border: 1px solid $blue;
+		}
+	}
+}
+
+/*.box {
+	background-color: #fff;
+	color: white;
+	padding: 1.75rem;
+	border-radius: 3px;
+	margin-bottom: 2rem;
+	-webkit-box-shadow: 2px 3px 10px -2px rgba(0,0,0,0.41);	
+	-moz-box-shadow: 2px 3px 10px -2px rgba(0,0,0,0.41);
+	box-shadow: 2px 3px 10px -2px rgba(0,0,0,0.41);
+
+	&:after {
+		content: "";
+		opacity: 0.8;
+		width: 100%;
+		height: 100%;
+		top:0;
+	 	position: absolute;
+	    z-index: -1; 
+
+	}
+}
+*/
+
+/* FOOTER STYLES */
+
+#wrapper-footer {
+	background-color: #000;
+	border-top: 4px solid #fff;
+	font-size: 14.5px;
+	color: #fff;
+}
+
+.site-info {
+	text-align: center;
+
+	a {
+		&:hover {
+			color: #fff;
+		}
+	}
+}
