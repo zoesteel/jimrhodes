@@ -202,7 +202,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 				<div class="col-12">							
 					<h2 class="section-heading"><?php echo $band_name; ?></h2>
 
-					<?php if($band_logo) { ?> <img src="<?php echo $band_logo['url']; ?>" class="img-fluid band-logo" width="200" /> <?php } ?>
+					<?php if($band_logo) { ?> <img src="<?php echo $band_logo['url']; ?>" class="img-fluid band-logo" alt="<?php echo $band_name; ?> Logo" width="200" /> <?php } ?>
 
 					<?php if($band_info) { ?> <p><?php echo $band_info; ?></p><?php } ?>
 					
@@ -229,7 +229,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 						<?php if( !empty($photo) ): ?>
 						<div class="col-12 col-lg-3">
-							<img src="<?php echo $photo['url']; ?>" class="img-fluid band-member-photo " />
+							<img src="<?php echo $photo['url']; ?>" class="img-fluid band-member-photo " alt="<?php echo $name; ?>" />
 						</div>
 						<?php endif; ?>
 							
