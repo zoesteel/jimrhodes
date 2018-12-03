@@ -15054,23 +15054,22 @@ body {
   text-align: justify;
   font-size: 16px;
   overflow-x: hidden;
-  background-color: #000;
 }
 
-/* line 18, sass/theme/_theme.scss */
+/* line 17, sass/theme/_theme.scss */
 a {
   color: #5B98F4;
   text-decoration: none;
   transition: 0.4s;
 }
-/* line 23, sass/theme/_theme.scss */
+/* line 22, sass/theme/_theme.scss */
 a:hover {
   color: #000;
   text-decoration: none;
 }
 
 /* HEADER STYLES */
-/* line 32, sass/theme/_theme.scss */
+/* line 31, sass/theme/_theme.scss */
 .mobile-menu {
   height: 28rem;
   background-color: #000;
@@ -15079,20 +15078,20 @@ a:hover {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  /* line 32, sass/theme/_theme.scss */
+  /* line 31, sass/theme/_theme.scss */
   .mobile-menu {
     display: none;
   }
 }
 
-/* line 44, sass/theme/_theme.scss */
+/* line 43, sass/theme/_theme.scss */
 .navbar {
   height: 20rem;
   color: #fff;
   background-color: #000;
 }
 
-/* line 50, sass/theme/_theme.scss */
+/* line 49, sass/theme/_theme.scss */
 .navbar-nav {
   background-color: #000;
   /*
@@ -15106,43 +15105,43 @@ a:hover {
   -moz-box-shadow: 2px 3px 10px -2px rgba(0,0,0,0.41);
   box-shadow: 2px 3px 10px -2px rgba(0,0,0,0.41);*/
 }
-/* line 63, sass/theme/_theme.scss */
+/* line 62, sass/theme/_theme.scss */
 .navbar-nav a {
   color: #ededed;
   font-weight: 500;
   font-size: 13.5px;
   text-transform: uppercase;
 }
-/* line 68, sass/theme/_theme.scss */
+/* line 67, sass/theme/_theme.scss */
 .navbar-nav a:hover {
   color: #999;
 }
 
-/* line 74, sass/theme/_theme.scss */
+/* line 73, sass/theme/_theme.scss */
 #navbarNavDropdown {
   background-color: #000;
 }
 
-/* line 78, sass/theme/_theme.scss */
+/* line 77, sass/theme/_theme.scss */
 h1 {
   font-family: "Lancelot", cursive;
 }
 
-/* line 82, sass/theme/_theme.scss */
+/* line 81, sass/theme/_theme.scss */
 .title-txt {
   font-size: 3.5em !important;
   position: absolute;
   bottom: 0;
 }
 @media screen and (min-width: 768px) {
-  /* line 82, sass/theme/_theme.scss */
+  /* line 81, sass/theme/_theme.scss */
   .title-txt {
     font-size: 5em !important;
   }
 }
 
 /*remember to test in IE */
-/* line 96, sass/theme/_theme.scss */
+/* line 95, sass/theme/_theme.scss */
 .wrap {
   background-color: #000;
   width: 100%;
@@ -15153,30 +15152,30 @@ h1 {
   box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.41);
 }
 @media screen and (min-width: 768px) {
-  /* line 96, sass/theme/_theme.scss */
+  /* line 95, sass/theme/_theme.scss */
   .wrap {
     height: 4rem;
     line-height: 4rem;
   }
 }
-/* line 111, sass/theme/_theme.scss */
+/* line 110, sass/theme/_theme.scss */
 .wrap a {
   color: #ededed;
   font-weight: 500;
   font-size: 11.5px;
 }
 @media screen and (min-width: 768px) {
-  /* line 111, sass/theme/_theme.scss */
+  /* line 110, sass/theme/_theme.scss */
   .wrap a {
     font-size: 13.5px;
   }
 }
-/* line 120, sass/theme/_theme.scss */
+/* line 119, sass/theme/_theme.scss */
 .wrap a:hover {
   color: #999;
 }
 
-/* line 126, sass/theme/_theme.scss */
+/* line 125, sass/theme/_theme.scss */
 .sticky {
   position: fixed;
   top: 0;
@@ -15186,28 +15185,28 @@ h1 {
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) 
 */
-/* line 136, sass/theme/_theme.scss */
+/* line 135, sass/theme/_theme.scss */
 .sticky + .content {
   padding-top: 102px;
 }
 
-/* line 143, sass/theme/_theme.scss */
+/* line 142, sass/theme/_theme.scss */
 .nav-menu ul {
   list-style-type: none;
   padding-left: 0;
 }
-/* line 147, sass/theme/_theme.scss */
+/* line 146, sass/theme/_theme.scss */
 .nav-menu ul li {
   margin-right: 1rem;
 }
 
-/* line 154, sass/theme/_theme.scss */
+/* line 153, sass/theme/_theme.scss */
 .burger-menu {
   display: inline-block;
   cursor: pointer;
 }
 
-/* line 159, sass/theme/_theme.scss */
+/* line 158, sass/theme/_theme.scss */
 .bar1, .bar2, .bar3 {
   width: 35px;
   height: 5px;
@@ -15216,31 +15215,31 @@ h1 {
   transition: 0.4s;
 }
 
-/* line 167, sass/theme/_theme.scss */
+/* line 166, sass/theme/_theme.scss */
 .change .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
   transform: rotate(-45deg) translate(-9px, 6px);
 }
 
-/* line 172, sass/theme/_theme.scss */
+/* line 171, sass/theme/_theme.scss */
 .change .bar2 {
   opacity: 0;
 }
 
-/* line 174, sass/theme/_theme.scss */
+/* line 173, sass/theme/_theme.scss */
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
 }
 
 /* FRONT PAGE STYLES */
-/* line 182, sass/theme/_theme.scss */
+/* line 181, sass/theme/_theme.scss */
 .container-main {
   padding: 2rem;
   height: 100%;
 }
 
-/* line 187, sass/theme/_theme.scss */
+/* line 186, sass/theme/_theme.scss */
 .section-heading {
   font-weight: 600;
   border-bottom: 4px solid black;
@@ -15251,30 +15250,30 @@ h1 {
   text-transform: uppercase;
 }
 
-/* line 197, sass/theme/_theme.scss */
+/* line 196, sass/theme/_theme.scss */
 .section-p {
   font-size: 14.5px;
   margin-bottom: 1.6rem;
 }
 
 /* SECTIONS */
-/* line 205, sass/theme/_theme.scss */
+/* line 204, sass/theme/_theme.scss */
 .wrapper {
   background-color: #fff;
 }
 
-/* line 209, sass/theme/_theme.scss */
+/* line 208, sass/theme/_theme.scss */
 .black-bg {
   background-color: #000;
   color: #fff;
 }
-/* line 213, sass/theme/_theme.scss */
+/* line 212, sass/theme/_theme.scss */
 .black-bg .section-heading {
   border-bottom: 4px solid #fff;
 }
 
 /* bio */
-/* line 220, sass/theme/_theme.scss */
+/* line 219, sass/theme/_theme.scss */
 .about-me {
   color: #000;
   width: 100%;
@@ -15282,7 +15281,7 @@ h1 {
   background-color: transparent;
   position: relative;
 }
-/* line 227, sass/theme/_theme.scss */
+/* line 226, sass/theme/_theme.scss */
 .about-me:after {
   content: "";
   background-image: url("img/crowd-bg.jpg");
@@ -15300,22 +15299,22 @@ h1 {
 }
 
 /* news */
-/* line 247, sass/theme/_theme.scss */
+/* line 246, sass/theme/_theme.scss */
 .news {
   background-color: #fff;
 }
-/* line 250, sass/theme/_theme.scss */
+/* line 249, sass/theme/_theme.scss */
 .news h3 {
   text-transform: uppercase;
   font-size: 16px;
 }
 
 /* show list */
-/* line 261, sass/theme/_theme.scss */
+/* line 260, sass/theme/_theme.scss */
 .shows .section-heading {
   border-bottom: 4px solid #fff;
 }
-/* line 265, sass/theme/_theme.scss */
+/* line 264, sass/theme/_theme.scss */
 .shows td, .shows th {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -15324,42 +15323,42 @@ h1 {
 }
 
 /* photo gallery */
-/* line 276, sass/theme/_theme.scss */
+/* line 275, sass/theme/_theme.scss */
 .caption {
   display: none !important;
 }
 
-/* line 281, sass/theme/_theme.scss */
+/* line 280, sass/theme/_theme.scss */
 .envira-gallery-image:hover {
   opacity: 0.7;
 }
 
 /* videos */
-/* line 289, sass/theme/_theme.scss */
+/* line 288, sass/theme/_theme.scss */
 .video-title {
   margin-top: 1rem;
   font-size: 14px;
 }
 
-/* line 294, sass/theme/_theme.scss */
+/* line 293, sass/theme/_theme.scss */
 .video-wrapper {
   max-width: 90%;
 }
 
 /* band info */
-/* line 300, sass/theme/_theme.scss */
+/* line 299, sass/theme/_theme.scss */
 .band-logo {
   display: block;
   margin: 0 auto 20px auto;
 }
 
-/* line 305, sass/theme/_theme.scss */
+/* line 304, sass/theme/_theme.scss */
 .band-member {
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
 
-/* line 310, sass/theme/_theme.scss */
+/* line 309, sass/theme/_theme.scss */
 .band-member-name {
   text-align: left;
   font-size: 16px;
@@ -15370,7 +15369,7 @@ h1 {
   border-bottom: 3px solid #000;
 }
 
-/* line 320, sass/theme/_theme.scss */
+/* line 319, sass/theme/_theme.scss */
 .band-member-photo {
   border-radius: 3px;
   width: 200px;
@@ -15378,14 +15377,14 @@ h1 {
   padding-top: 0.75rem;
 }
 
-/* line 327, sass/theme/_theme.scss */
+/* line 326, sass/theme/_theme.scss */
 .band-member-info {
   padding-bottom: 0.5rem;
   padding-top: 0.75rem;
   font-style: italic;
 }
 
-/* line 333, sass/theme/_theme.scss */
+/* line 332, sass/theme/_theme.scss */
 .band-bio-title {
   text-align: left;
   font-size: 14px;
@@ -15395,46 +15394,46 @@ h1 {
   border-bottom: 2px solid #000;
 }
 
-/* line 342, sass/theme/_theme.scss */
+/* line 341, sass/theme/_theme.scss */
 .band-member-bio {
   padding-bottom: 0.5rem;
   padding-top: 0.75rem;
 }
 
 /* song list */
-/* line 349, sass/theme/_theme.scss */
+/* line 348, sass/theme/_theme.scss */
 .songs {
   background-color: #5B98F4;
 }
 
 /* contact form */
-/* line 357, sass/theme/_theme.scss */
+/* line 356, sass/theme/_theme.scss */
 .contact label {
   text-transform: uppercase;
   margin-bottom: 1.2rem;
   font-weight: 500;
 }
-/* line 363, sass/theme/_theme.scss */
+/* line 362, sass/theme/_theme.scss */
 .contact input {
   border: 1px solid #000 !important;
   border-radius: 0 !important;
 }
-/* line 369, sass/theme/_theme.scss */
+/* line 368, sass/theme/_theme.scss */
 .contact textarea {
   border: 1px solid #000 !important;
   border-radius: 0 !important;
 }
-/* line 375, sass/theme/_theme.scss */
+/* line 374, sass/theme/_theme.scss */
 .contact:focus {
   border-color: #5B98F4;
 }
-/* line 379, sass/theme/_theme.scss */
+/* line 378, sass/theme/_theme.scss */
 .contact input[type=submit] {
   background-color: #000;
   color: #fff;
   text-transform: uppercase;
 }
-/* line 384, sass/theme/_theme.scss */
+/* line 383, sass/theme/_theme.scss */
 .contact input[type=submit]:hover {
   background-color: #5B98F4;
   color: #fff;
@@ -15464,7 +15463,7 @@ h1 {
 }
 */
 /* FOOTER STYLES */
-/* line 417, sass/theme/_theme.scss */
+/* line 416, sass/theme/_theme.scss */
 #wrapper-footer {
   background-color: #000;
   border-top: 4px solid #fff;
@@ -15472,11 +15471,11 @@ h1 {
   color: #fff;
 }
 
-/* line 424, sass/theme/_theme.scss */
+/* line 423, sass/theme/_theme.scss */
 .site-info {
   text-align: center;
 }
-/* line 428, sass/theme/_theme.scss */
+/* line 427, sass/theme/_theme.scss */
 .site-info a:hover {
   color: #fff;
 }

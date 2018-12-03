@@ -44,16 +44,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						<?php if ( is_front_page() && is_home() ) : ?>
 
+							
+	        					<img src="<?php echo get_template_directory_uri(); ?>/img/jim-rhodes-2.jpg" class="title-img" alt="Jim Rhodes Musician" />  
+
 							<h1 class="navbar-brand mb-0 title-txt"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
 
-	        					<img src="<?php echo get_template_directory_uri(); ?>/img/jim-rhodes.jpg" class="title-img" alt="Jim Rhodes Musician" />  
-
-							
 						<?php else : ?>
 
-							<h1 class="navbar-brand title-txt" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></h1>
 	        					<img src="<?php echo get_template_directory_uri(); ?>/img/jim-rhodes-2.jpg" class="title-img img-fluid" alt="Jim Rhodes Musician" />  
 
+							<h1 class="navbar-brand title-txt" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></h1>
 						
 						<?php endif; ?>
 						
