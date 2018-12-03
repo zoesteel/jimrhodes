@@ -12,16 +12,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129416648-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-129416648-1');
-	</script>
-
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -42,25 +32,39 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav class="navbar navbar-expand-md navbar-dark">	
-			<?php if ( 'container' == $container ) : ?>
+		<nav class="navbar navbar-expand-md navbar-dark ">
+
+		<?php if ( 'container' == $container ) : ?>
 			<div class="container d-flex justify-content-center" >
 		<?php endif; ?>
 				<div class="row">
 					<div class="col-12 d-flex justify-content-center">
-					<!-- Your site title as branding in the menu -->					
-	        			<img src="<?php echo get_template_directory_uri(); ?>/img/jim-rhodes-2.jpg" class="title-img img-fluid" alt="Jim Rhodes Musician" />  
+					<!-- Your site title as branding in the menu -->
+					<?php if ( ! has_custom_logo() ) { ?>
 
-					
-						<h1 class="navbar-brand title-txt" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></h1>
+						<?php if ( is_front_page() && is_home() ) : ?>
+
+							<h1 class="navbar-brand mb-0 title-txt"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
+
+	        					<img src="<?php echo get_template_directory_uri(); ?>/img/jim-rhodes.jpg" class="title-img" alt="Jim Rhodes Musician" />  
+
+							
+						<?php else : ?>
+
+							<h1 class="navbar-brand title-txt" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></h1>
+	        					<img src="<?php echo get_template_directory_uri(); ?>/img/jim-rhodes-2.jpg" class="title-img img-fluid" alt="Jim Rhodes Musician" />  
+
+						
+						<?php endif; ?>
 						
 					
-</div></div>
+					<?php } else {
+						the_custom_logo();
+					} ?><!-- end custom logo -->
+
 				<!-- The WordPress Menu goes here -->
 				</div> <!-- end container -->
 
-			<!-- The WordPress Menu goes here -->
-				
 			<?php if ( 'container' == $container ) : ?> 
 				<div class="container-fluid d-flex justify-content-center" >
 			 <?php endif; ?>		 
@@ -90,37 +94,35 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="container nav-menu">
 		<div class="row">
 			<div class="col-12">
-				<div class="d-flex justify-content-center">
-					<div class="burger-menu d-md-none" id="burger-menu" onclick="burgerAnimation(this)">
-					  <div class="bar1"></div>
-					  <div class="bar2"></div>
-					  <div class="bar3"></div>
-					</div>
-
-				 	<!-- <ul class="d-flex flex-row justify-content-center mobile-menu" id="hello">
-						<li><a href="#about">ABOUT</a></li> 
-						<?php $news = get_field('news'); if($news){ ?> <li><a href="#news">NEWS</a></li> <?php  }?>
-						<li><a href="#shows">SHOWS</a></li>
-						<li><a href="#videos">VIDEOS</a></li>
-						<li><a href="#songs">SONG LIST</a></li>
-						<li><a href="#contact">CONTACT</a></li>
-					</ul> -->
-
+				<ul class="flex-column flex-sm-row align-items-center justify-content-center d-flex">
+					<li><a href="#about">ABOUT</a></li> 
+					<?php $news = get_field('news'); if($news){ ?> <li><a href="#news">NEWS</a></li> <?php  }?>
+					<li><a href="#shows">SHOWS</a></li>
+					<li><a href="#photos">PHOTOS</a></li>
+					<li><a href="#videos">VIDEOS</a></li>
+					<?php $band_name = get_field('band_name'); if($band_name){ ?> <li><a href="#band-info" style="text-transform: uppercase;"><?php echo $band_name; ?></a></li> <?php  }?>
+					<li><a href="#songs">SONG LIST</a></li>
+					<li><a href="#contact">CONTACT</a></li>
+				</ul>
+			</div>
+			<!-- <div class="col-12 d-flex justify-content-center">
+				<div class="burger-menu d-md-none" id="burger-menu" onclick="burgerAnimation(this)">
+				  <div class="bar1"></div>
+				  <div class="bar2"></div>
+				  <div class="bar3"></div>
 				</div>
-				<div class="menu-items">
-					<ul class="d-none flex-column d-md-flex flex-sm-row align-items-center justify-content-center">
-						<li><a href="#about">ABOUT</a></li> 
-						<?php $news = get_field('news'); if($news){ ?> <li><a href="#news">NEWS</a></li> <?php  }?>
-						<li><a href="#shows">SHOWS</a></li>
-						<li><a href="#photos">PHOTOS</a></li>
-						<li><a href="#videos">VIDEOS</a></li>
-						<?php $band_name = get_field('band_name'); if($band_name){ ?> <li><a href="#band-info" style="text-transform: uppercase;"><?php echo $band_name; ?></a></li> <?php  }?>
-						<li><a href="#songs">SONG LIST</a></li>
-						<li><a href="#contact">CONTACT</a></li>
-					</ul>
-				</div>
-			</div> 
 
+				<ul class="flex-row justify-content-center mobile-menu" id="hello">
+					<li><a href="#about">ABOUT</a></li> 
+					<?php $news = get_field('news'); if($news){ ?> <li><a href="#news">NEWS</a></li> <?php  }?>
+					<li><a href="#shows">SHOWS</a></li>
+					<li><a href="#videos">VIDEOS</a></li>
+					<li><a href="#songs">SONG LIST</a></li>
+					<li><a href="#contact">CONTACT</a></li>
+				</ul>
+
+
+			</div> -->
 
 		</div>
 	</div>
