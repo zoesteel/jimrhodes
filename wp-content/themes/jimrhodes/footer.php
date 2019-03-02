@@ -59,8 +59,12 @@ var sticky = header.offsetTop;
 function stickyHeader() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
+    document.getElementsByClassName('test').classList.add("d-block");
+    // document.getElementsByClassName('test').classList.remove("d-none");
   } else {
     header.classList.remove("sticky");
+    document.getElementsByClassName('test').classList.remove("d-block");
+    document.getElementsByClassName('test').classList.add("d-none");
   }
 }
 
@@ -74,7 +78,9 @@ function burgerAnimation(x) {
 
 jQuery('.burger-menu').click(function(){
 
-	jQuery('.menu-items').toggle('d-flex');
+	jQuery('#mobile-menu').toggleClass('display-none');
+
+
 });
 
 

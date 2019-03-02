@@ -102,7 +102,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 							$venue = $show['venue']; 
 							$bandname = $show['band_name']; 
 							$i++;
-							if($i == 10) break;			
+							// if($i == 10) break;			
 							?>								 
 								    
 						     <tr> <th scope="row"><?php echo $date; ?></th>
@@ -163,7 +163,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 			?>					
 															
-			<div class="col-12 col-lg-6 d-flex flex-column align-items-center justify-content-start mb-4">	
+			<div class="videos-div col-12 col-lg-6 mb-4">	
 				<?php  
 					echo $video['video_link']; 
 					echo '<p class="align-self-center justify-self-center video-title">';
@@ -220,8 +220,6 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						$band_member_bio = $band_member['band_member_bio'];
 						$photo = $band_member['photo']; 
 						 
-
-
 						?>	
 						<div class="col-12">
 							<h4 class="band-member-name"><?php echo $name; ?></h4>
@@ -229,11 +227,11 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 						<?php if( !empty($photo) ): ?>
 						<div class="col-12 col-lg-3">
-							<img src="<?php echo $photo['url']; ?>" class="img-fluid band-member-photo " alt="<?php echo $name; ?>" />
+							<img src="<?php echo $photo['url']; ?>" class="img-fluid band-member-photo" alt="<?php echo $name; ?>" />
 						</div>
 						<?php endif; ?>
 							
-						<div class=" col-12 col-lg-9">
+						<div class="col-12 col-lg-9">
 							<?php if( !empty($info) ) : ?>
 								<p class="band-member-info"><?php echo $info; ?></p>
 							<?php endif; ?>
@@ -274,7 +272,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 		 	</div>
 		</div>
-		<div class="row">
+		<div class="row d-flex flex-row">
  			<?php  
 	 			$songs = get_field('set_list'); 				 	
 
