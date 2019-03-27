@@ -61,10 +61,12 @@ function stickyHeader() {
     header.classList.add("sticky");
     document.getElementsByClassName('test').classList.add("d-block");
     // document.getElementsByClassName('test').classList.remove("d-none");
+
   } else {
     header.classList.remove("sticky");
     document.getElementsByClassName('test').classList.remove("d-block");
     document.getElementsByClassName('test').classList.add("d-none");
+
   }
 }
 
@@ -83,10 +85,7 @@ jQuery('.burger-menu').click(function(){
 
 });
 
-
-
 </script>
 </body>
 
 </html>
-
