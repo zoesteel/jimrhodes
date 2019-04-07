@@ -20,7 +20,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 <?php if ( is_front_page() && is_home() ) : ?>
 	<?php get_template_part( 'global-templates/hero' ); ?>
 <?php endif; ?>
-<main class="site-main" id="main">
+<main class="site-main " id="main">
 
 
 <section id="about">
@@ -62,37 +62,45 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			<div class="row">
 				<div class="col-12">						
 					<h2 class="section-heading">SHOWS</h2>
-					<table class="table">						
-						<tbody>
-							<?php 
-				 				$shows = get_field('shows'); 		 				
-				 				$i= 0;
-								foreach($shows as $show):
+					<table class="table">	
+					<!-- <thead>
+					    <tr>
+					      <th scope="col">Date</th>
+					      <th scope="col">Time</th>
+					      <th scope="col">Venue</th>
+					      <th scope="col">Band</th>
+					    </tr>
+					</thead> --> 
+					<tbody>
+					<?php 
+		 				$shows = get_field('shows'); 		 				
+		 				$i= 0;
+						foreach($shows as $show):
 
-				 				$date = $show['date'];											
-								$time = $show['time']; 
-								$venue = $show['venue']; 
-								$bandname = $show['band_name']; 
-								$i++;
-								// if($i == 10) break;			
-							?>								 
+		 				$date = $show['date'];											
+						$time = $show['time']; 
+						$venue = $show['venue']; 
+						$bandname = $show['band_name']; 
+						$i++;
+						// if($i == 10) break;			
+						?>								 
 							    
-						    <tr><th scope="row"><?php echo $date; ?></th>
-							    <td><?php if($time) { echo $time; } ?></td>
-							    <td><?php echo $venue; ?></td>
-							    <td><?php if($bandname) { echo $bandname; } ?></td>
-						   
-								<?php endforeach; 				 	
-								// Reset postdata
-								wp_reset_postdata();
-								?>
-						  	</tr>							
-						</tbody>
-					</table>
-				</div><!-- end col -->
-			</div><!-- end row -->
-		</div><!-- end container -->
-	</div><!-- end wrapper --> 		
+					     <tr> <th scope="row"><?php echo $date; ?></th>
+					      <td><?php if($time) { echo $time; } ?></td>
+					      <td><?php echo $venue; ?></td>
+					      <td><?php if($bandname) { echo $bandname; } ?></td>
+					   
+						<?php endforeach; 				 	
+						// Reset postdata
+						wp_reset_postdata();
+						?>
+					  </tr>							
+					</tbody>
+				</table>
+			</div><!-- end col -->
+		</div><!-- end row -->
+	</div><!-- end container -->
+</div><!-- end wrapper --> 		
 </section>
 
 <section id="photos">
@@ -101,13 +109,13 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			<div class="row">
 				<div class="col-12">
 					<h2 class="section-heading">PHOTOS</h2>
-				</div><!-- end col -->
+				</div>
 				<div class="col-12 d-flex justify-self-center">
 					<?php echo do_shortcode('[envira-gallery id="126"]'); ?>
-				</div><!-- end col --> 
-			</div><!-- end row -->
-		</div><!-- container main --> 
-	</div><!-- end photos wrapper -->
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 
 <?php  
@@ -121,7 +129,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			<div class="row">
 				<div class="col-12">							
 					<h2 class="section-heading">VIDEOS</h2>
-			 	</div><!-- end col -->
+			 	</div>
 			 									
 				<?php
 				//Loop through the $videos object
@@ -140,10 +148,16 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						echo $video_credit;
 						echo '</p>';					
 					 ?>
-				</div><!-- end videos div -->																			
-				<?php	} ?>	
-		 	</div><!-- end row -->
-		</div><!-- end container --> 
+
+				</div>																			
+					<?php	} ?>	
+			 	</div>
+			</div>
+			<div class="row">
+			 	<div class="col-12 col-md-6"> 		
+				</div><!-- end col -->
+			</div><!-- end row -->
+		</div><!-- end container -->
 	</div><!-- end wrapper --> 		
 </section>
 <?php } ?>
@@ -163,7 +177,9 @@ $container   = get_theme_mod( 'understrap_container_type' );
 				<div class="col-12">							
 					<h2 class="section-heading"><?php echo $band_name; ?></h2>
 					<?php if($band_logo) { ?> <img src="<?php echo $band_logo['url']; ?>" class="img-fluid band-logo" alt="<?php echo $band_name; ?> Logo" width="200" /> <?php } ?>
-					<?php if($band_info) { ?> <p><?php echo $band_info; ?></p><?php } ?>					
+
+					<?php if($band_info) { ?> <p><?php echo $band_info; ?></p><?php } ?>
+					
 				</div><!-- end col -->
 			</div><!--- end row -->
 			<div class="row">
@@ -206,8 +222,8 @@ $container   = get_theme_mod( 'understrap_container_type' );
 					</div><!-- end col -->
 					<?php endforeach; 
 					 	
-					// Reset postdata
-				wp_reset_postdata(); ?>
+						// Reset postdata
+					wp_reset_postdata(); ?>
 			</div><!-- end row -->
 		</div><!-- end container main -->
 	</div><!-- end band members wrapper -->
@@ -222,8 +238,8 @@ $container   = get_theme_mod( 'understrap_container_type' );
 				<div class="col-12">
 					<h2 class="section-heading">SONG LIST</h2>
 					<p class="section-p">Jim's solo show offers everything from intimate, acoustic arrangements to an upbeat energy packed show using professionally programmed backing tracks. The song list varies from show to show, depending on the crowd and the venue. Playing hits by some of these artists:</p>
-			 	</div><!-- end col --> 
-			</div><!-- end row -->
+			 	</div>
+			</div>
 			<div class="row d-flex flex-row">
 	 			<?php  
 		 			$songs = get_field('set_list'); 				 	
@@ -243,9 +259,9 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			<div class="row">
 				<div class="col-12">							
 					<h2 class="section-heading">CONTACT</h2>
-			 	</div><!-- end col -->
-			</div><!-- end row -->
-			<div class="row">
+			 	</div>
+			 </div>
+			 <div class="row">
 			 	<div class="col-12">
 			 		<?php $contact='[contact-form-7 id="42" title="Contact form 1 "]'?>
 					<?php echo do_shortcode($contact);?>
@@ -259,6 +275,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 <!-- tour dates -->
 
 <?php 
+// put this in template part?
 
 // $show = get_field('');
 
@@ -268,6 +285,9 @@ $showVenue = get_field('show_venue');
 $nameOfBand = get_field('name_of_band');
 
 ?>
+
+<table>
+</table>
 
 </main><!-- #main -->
 

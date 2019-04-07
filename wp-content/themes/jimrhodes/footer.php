@@ -16,32 +16,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="wrapper" id="wrapper-footer">
 
 	<div class="container">
-
 		<div class="row">
-
 			<div class="col-12">
-
 				<footer class="site-footer" id="colophon">
-
 					<div class="site-info">
 							&copy; <?php echo date("Y"); ?>
 							| <?php printf( // WPCS: XSS ok.
 							/* translators:*/
 								esc_html__( 'Theme: %1$s by %2$s.', 'understrap' ), $the_theme->get( 'Name' ),  '<a href="'.esc_url( __('http://zoesteel.com')).'" target="_blank">Zoe Steel</a>' ); ?> 
-				
-							
 					</div><!-- .site-info -->
-
 				</footer><!-- #colophon -->
-
 			</div><!--col end -->
-
 		</div><!-- row end -->
-
 	</div><!-- container end -->
-
 </div><!-- wrapper end -->
-
 </div><!-- #page we need this extra closing tag here -->
 
 <?php wp_footer(); ?>
@@ -87,5 +75,4 @@ jQuery('.burger-menu').click(function(){
 
 </script>
 </body>
-
 </html>

@@ -26,7 +26,21 @@ a {
 	}
 }
 
-.row:before, .row:after {display: none !important;}
+.row:before, .row:after {
+	display: none !important;
+}
+
+
+
+/* /// CSS GRID STYLES /// */
+
+.site-main {
+	/*display: grid;*/
+	/*grid-template-columns: 1fr 1fr 1fr;*/
+}
+
+/* /// CSS GRID STYLES /// */
+
 
 /* HEADER STYLES */
 
@@ -50,7 +64,7 @@ a {
 	transition: 0.3s;
 	padding-left: 45%!important;
 	box-sizing: border-box;
-	margin-top: .5rem 
+	margin-top: .5rem; 
 
 	li {
 		font-size: 17px;
@@ -66,17 +80,6 @@ a {
 
 .navbar-nav {
 	background-color: #000;
-	/*
-	maybe ignore this
-	height: 4rem;
-	line-height: 4rem;
-	width: 100%;
-	border-bottom: 1px solid $grey;
-	z-index: 999;
-	-webkit-box-shadow: 2px 3px 10px -2px rgba(0,0,0,0.41);	
-	-moz-box-shadow: 2px 3px 10px -2px rgba(0,0,0,0.41);
-	box-shadow: 2px 3px 10px -2px rgba(0,0,0,0.41);*/
-	
 	a {
 		color: #ededed;
 		font-weight: 500;
@@ -88,10 +91,8 @@ a {
 	}
 }
 
-
-
 .initials {
-	height: 1.6rem;
+	height: 37px;
 	padding-right: 1rem;
 	transition: 3ms;
 }
@@ -420,28 +421,6 @@ h1 {
 	}
 }
 
-/*.box {
-	background-color: #fff;
-	color: white;
-	padding: 1.75rem;
-	border-radius: 3px;
-	margin-bottom: 2rem;
-	-webkit-box-shadow: 2px 3px 10px -2px rgba(0,0,0,0.41);	
-	-moz-box-shadow: 2px 3px 10px -2px rgba(0,0,0,0.41);
-	box-shadow: 2px 3px 10px -2px rgba(0,0,0,0.41);
-
-	&:after {
-		content: "";
-		opacity: 0.8;
-		width: 100%;
-		height: 100%;
-		top:0;
-	 	position: absolute;
-	    z-index: -1; 
-
-	}
-}
-*/
 
 /* FOOTER STYLES */
 
