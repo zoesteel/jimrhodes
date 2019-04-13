@@ -34,44 +34,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php wp_footer(); ?>
 
-<script>// When the user scrolls the page, execute myFunction 
-window.onscroll = function() { stickyHeader()};
-
-// Get the header
-var header = document.getElementById("sticky-header");
-
-// Get the offset position of the navbar
-var sticky = header.offsetTop;
-
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function stickyHeader() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-    document.getElementsByClassName('test').classList.add("d-block");
-    // document.getElementsByClassName('test').classList.remove("d-none");
-
-  } else {
-    header.classList.remove("sticky");
-    document.getElementsByClassName('test').classList.remove("d-block");
-    document.getElementsByClassName('test').classList.add("d-none");
-
-  }
-}
+<script>
 
 //this removes the image name from the lightbox
 jQuery(".envira-gallery-image, .envira-gallery-link").attr("title", "");
-
-//burger menus
-function burgerAnimation(x) {
-    x.classList.toggle("change");
-}
-
-jQuery('.burger-menu').click(function(){
-
-	jQuery('#mobile-menu').toggleClass('display-none');
-
-
-});
 
 </script>
 </body>

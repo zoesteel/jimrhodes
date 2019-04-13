@@ -70,6 +70,12 @@ require get_template_directory() . '/inc/woocommerce.php';
  */
 require get_template_directory() . '/inc/editor.php';
 
+
+// Custom scripts
+wp_enqueue_script('sticky-header', get_template_directory_uri() . '/js/sticky-header.js', array(), '20190410', true );
+wp_enqueue_script('burger-menu', get_template_directory_uri() . '/js/burger-menu.js', array(), '20190410', true );
+
+
 function wpb_add_google_fonts() {
  
 wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Lancelot', false ); 

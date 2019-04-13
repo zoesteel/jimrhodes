@@ -62,8 +62,8 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			<div class="row">
 				<div class="col-12">						
 					<h2 class="section-heading">SHOWS</h2>
-					<table class="table">						
-						<tbody>
+					<!-- <table class="table">						 -->
+						<!-- <tbody> -->
 							<?php 
 				 				$shows = get_field('shows'); 		 				
 				 				$i= 0;
@@ -77,7 +77,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 								// if($i == 10) break;			
 							?>								 
 							    
-						    <tr><th scope="row"><?php echo $date; ?></th>
+						   <!--  <tr><th scope="row"><?php echo $date; ?></th>
 							    <td><?php if($time) { echo $time; } ?></td>
 							    <td><?php echo $venue; ?></td>
 							    <td><?php if($bandname) { echo $bandname; } ?></td>
@@ -86,9 +86,34 @@ $container   = get_theme_mod( 'understrap_container_type' );
 								// Reset postdata
 								wp_reset_postdata();
 								?>
-						  	</tr>							
-						</tbody>
-					</table>
+						  	</tr>					 -->		
+						<!-- </tbody> -->
+					<!-- </table> -->
+					<!-- class="d-flex flex-column justify-content-between flex-md-row" -->
+					
+						<?php 
+				 				$shows = get_field('shows'); 		 				
+				 				$i= 0;
+								foreach($shows as $show):
+
+				 				$date = $show['date'];											
+								$time = $show['time']; 
+								$venue = $show['venue']; 
+								$bandname = $show['band_name']; 
+								$i++;
+								// if($i == 10) break;			
+							?>		
+						<div class="show-date d-flex flex-column flex-md-row align-items-center">
+							<p class="col-12 col-md-3"><strong><?php echo $date; ?></strong></p>
+							<p class="col-12 col-md-2"><?php if($time) { echo $time; } ?></p>
+							<p class="col-12 col-md-4"><?php echo $venue; ?></p>
+							<p class="col-12 col-md-3"><?php if($bandname) { echo $bandname; } ?></p>
+						</div>
+						<?php endforeach; 				 	
+							// Reset postdata
+							wp_reset_postdata();
+							?>
+					
 				</div><!-- end col -->
 			</div><!-- end row -->
 		</div><!-- end container -->
@@ -224,13 +249,13 @@ $container   = get_theme_mod( 'understrap_container_type' );
 					<p class="section-p">Jim's solo show offers everything from intimate, acoustic arrangements to an upbeat energy packed show using professionally programmed backing tracks. The song list varies from show to show, depending on the crowd and the venue. Playing hits by some of these artists:</p>
 			 	</div><!-- end col --> 
 			</div><!-- end row -->
-			<div class="row d-flex flex-row">
+			<div class="song-list">
 	 			<?php  
 		 			$songs = get_field('set_list'); 				 	
 
 					foreach($songs as $song) { 	
 						$songName = $song['song_name']; ?>
-						<p class="col-12 col-sm-6 col-lg-4"><?php echo $songName; ?></p>								
+						<p class="song-name"><?php echo $songName; ?></p>								
 				 <?php  } ?> 
 			</div><!-- end row -->
 		</div><!-- end container -->

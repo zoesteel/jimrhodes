@@ -27,6 +27,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="hfeed site" id="page">
 	<!-- ******************* The Navbar Area ******************* -->
 	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
+
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
 		<nav class="navbar navbar-expand-md navbar-dark ">
@@ -38,7 +39,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="col-12 d-flex justify-content-center">
 						<!-- Your site title as branding in the menu -->
 						
-		    			<img src="<?php echo get_template_directory_uri(); ?>/img/jim-rhodes-2.jpg" class="title-img" alt="Jim Rhodes Musician" />  
+		    			<img src="<?php echo get_template_directory_uri(); ?>/img/jim-rhodes-2.jpg" class="title-img img-fluid" alt="Jim Rhodes Musician" />  
 
 						<h1 class="navbar-brand title-txt" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></h1>
 						
@@ -46,42 +47,43 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div><!-- end row -->
 			</div><!-- end container -->
 	
-		
-		</div><!-- .wrapper-navbar end -->
-		<div class="wrap" id="sticky-header">
-			<div class="container nav-menu">
-				<div class="row">
-					<div class="col-12 main-menu">
-						<ul class="menu-ul d-none d-md-flex flex-md-row align-items-center justify-content-center">
-							<li class="test"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/jr.png" alt="Jim Rhodes" id="initials"></a></li>
-							<li><a href="#about">ABOUT</a></li> 
-							<?php $news = get_field('news'); if($news){ ?> <li><a href="#news">NEWS</a></li> <?php  }?>
-							<li><a href="#shows">SHOWS</a></li>
-							<li><a href="#photos">PHOTOS</a></li>
-							<li><a href="#videos">VIDEOS</a></li>
-							<?php $band_name = get_field('band_name'); if($band_name){ ?> <li><a href="#band-info" style="text-transform: uppercase;"><?php echo $band_name; ?></a></li> <?php  }?>
-							<li><a href="#songs">SONG LIST</a></li>
-							<li><a href="#contact">CONTACT</a></li>
-						</ul>
-					</div><!-- end main menu -->
-					<div class="mobile-menu-container">
-						<div class="burger-menu d-md-none" id="burger-menu" onclick="burgerAnimation(this)">
-						    <div class="bar1"></div>
-						    <div class="bar2"></div>
-						  	<div class="bar3"></div>
-						</div><!-- end burger menu -->
-						<ul class="mobile-menu display-none d-md-none" id="mobile-menu">
-							<li><a href="#about">ABOUT</a></li> 
-							<?php $news = get_field('news'); if($news){ ?> <li><a href="#news">NEWS</a></li> <?php  }?>
-							<li><a href="#shows">SHOWS</a></li>
-							<li><a href="#photos">PHOTOS</a></li>
-							<li><a href="#videos">VIDEOS</a></li>
-							<?php $band_name = get_field('band_name'); if($band_name){ ?> <li><a href="#band-info" style="text-transform: uppercase;"><?php echo $band_name; ?></a></li> <?php  }?>
-							<li><a href="#songs">SONG LIST</a></li>
-							<li><a href="#contact">CONTACT</a></li>
-						</ul>
-					</div><!-- end mobile menu --> 
-				</div><!-- end row --> 
-			</div><!-- end nav menu -->
-		</div> <!-- end sticky header wrap -->
-	</nav>
+		</nav><!-- .site-navigation -->
+</div><!-- .wrapper-navbar end -->
+<div class="wrap" id="sticky-header">
+	<div class="container nav-menu">
+		<div class="row">
+			<div class="col-12 main-menu">
+				<ul class="menu-ul d-none d-lg-flex flex-lg-row align-items-center justify-content-center">
+					<li class="initials"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/jr.png" alt="Jim Rhodes" id="initials-img"></a></li>
+					<li><a href="#about">ABOUT</a></li> 
+					<?php $news = get_field('news'); if($news){ ?> <li><a href="#news">NEWS</a></li> <?php  }?>
+					<li><a href="#shows">SHOWS</a></li>
+					<li><a href="#photos">PHOTOS</a></li>
+					<li><a href="#videos">VIDEOS</a></li>
+					<?php $band_name = get_field('band_name'); if($band_name){ ?> <li><a href="#band-info" style="text-transform: uppercase;"><?php echo $band_name; ?></a></li> <?php  }?>
+					<li><a href="#songs">SONG LIST</a></li>
+					<li><a href="#contact">CONTACT</a></li>
+				</ul>
+			</div><!-- end main menu -->
+			<!-- <div class="mobile-logo">JR</div> -->
+			<div class="mobile-menu-container">
+				<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/jr.png" alt="Jim Rhodes" class="burger-initials d-none d-lg-none"></a>
+				<div class="burger-menu d-lg-none" id="burger-menu" onclick="burgerAnimation(this)">
+				    <div class="bar1"></div>
+				    <div class="bar2"></div>
+				  	<div class="bar3"></div>
+				</div><!-- end burger menu -->
+				<ul class="mobile-menu display-none d-lg-none" id="mobile-menu">
+					<li><a href="#about">ABOUT</a></li> 
+					<?php $news = get_field('news'); if($news){ ?> <li><a href="#news">NEWS</a></li> <?php  }?>
+					<li><a href="#shows">SHOWS</a></li>
+					<li><a href="#photos">PHOTOS</a></li>
+					<li><a href="#videos">VIDEOS</a></li>
+					<?php $band_name = get_field('band_name'); if($band_name){ ?> <li><a href="#band-info" style="text-transform: uppercase;"><?php echo $band_name; ?></a></li> <?php  }?>
+					<li><a href="#songs">SONG LIST</a></li>
+					<li><a href="#contact">CONTACT</a></li>
+				</ul>
+			</div><!-- end mobile menu --> 
+		</div><!-- end row --> 
+	</div><!-- end nav menu -->
+</div> <!-- end sticky header wrap -->
